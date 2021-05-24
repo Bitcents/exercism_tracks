@@ -51,11 +51,11 @@ class Rational:
         if power >= 0:
             return Rational(pow(self.numer, power), pow(self.denom, power))
         else:
-            return Rational(pow(self.denom, abs(power)), pow(self.numer, abs(power)))
+            return Rational(pow(self.numer, abs(power)), pow(self.numer, abs(power)))
 
-    def __rpow__(self, base) -> Rational:
-        pass
-    
+    def __rpow__(self, base) -> float:
+        power: float = self.numer / self.denom
+        return base ** power
     
     def reduce_to_lowest(self) -> None:
         if self.numer == 0:
