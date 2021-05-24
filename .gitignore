@@ -1,2 +1,2 @@
-__pycache__/
-.exercism/
+./*/__pycache__/
+./*/.exercism/
