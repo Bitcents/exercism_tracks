@@ -7,14 +7,8 @@ def latest(scores):
 
 
 def personal_best(scores):
-    # itearte through list and return the highest score
-
-    # We set max score to a very low number
-    # This is not necessary if negative scores are not allowed
-    max_score = -1*sys.maxsize 
-    for score in scores:
-        max_score = max(score, max_score)
-    return max_score
+    # use built-in max function
+    return max(scores)
 
 def personal_top_three(scores):
     # There are several ways to implement this
